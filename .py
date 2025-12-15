@@ -7,14 +7,14 @@ from aiogram.filters import CommandStart
 
 load_dotenv()
 
-TOKEN = os.getenv("8538453663:AAFWKUWd07diMajjLUGfgfFn6cSwl4xGUUA")
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(TOKEN)
 dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: Message):
-  await message.answer("Привет! Я твой бот)
+  await message.answer("Привет! Я твой бот")
 
 async def main():
   await dp.start_polling(bot)
